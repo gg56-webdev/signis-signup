@@ -1,17 +1,15 @@
 import { Box, Container, Flex, Heading, Stack, Divider, Grid } from '@chakra-ui/react';
 import Image from 'next/future/image';
-import { useTranslationContext } from '../../context/translation';
 import partnersLogos from '../../public/partners';
 import hostsLogos from '../../public/hosts';
 import supportLogos from '../../public/support';
 
-export default function Partners() {
-  const { partners } = useTranslationContext();
+export default function Partners({ text }) {
   return (
     <Box as='section' bg='white'>
       <Container py='20' maxW='container.xl'>
         <Heading color='brand.main' textAlign='center' mb='10'>
-          {partners.h2}
+          {text.h2}
         </Heading>
         <Stack spacing='16'>
           <Flex

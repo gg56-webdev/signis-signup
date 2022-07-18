@@ -24,15 +24,13 @@ import {
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { useTranslationContext } from '../../../context/translation';
 
-export default function AuthModal() {
+export default function AuthModal({ text }) {
+  const { hero, modal } = text;
   const { locale } = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { isOpen: isOpenTerms, onToggle } = useDisclosure();
-  const { hero, modal } = useTranslationContext();
   const [loading, setLoading] = useState(false);
-  const [disabled, setDisabled] = useState(false);
   const [done, setDone] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -41,8 +39,10 @@ export default function AuthModal() {
     const formData = new FormData(e.target);
     const formObj = {};
     for (const [k, v] of formData) {
-      formObj[k] = v;
+      formObj[k] = v.toString();
     }
+
+    console.log(formObj);
     try {
       const res = await fetch('/api/submit', {
         method: 'POST',
@@ -52,7 +52,6 @@ export default function AuthModal() {
       const data = await res.json();
       console.log(data);
       setDone(true);
-      // setDisabled(true);
     } catch (err) {
       console.error(err);
     } finally {
@@ -65,7 +64,7 @@ export default function AuthModal() {
         {hero.btn}
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose} motionPreset='scale' size='xl'>
+      <Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInBottom' size='xl'>
         <ModalOverlay bg='blackAlpha.400' />
         <ModalContent mx='2' color='initial' overflow='hidden'>
           <ModalCloseButton />
@@ -106,32 +105,42 @@ export default function AuthModal() {
                     <FormLabel htmlFor='name'>{modal.form.name}</FormLabel>
                     <Input id='name' name='name' type='text' />
                   </FormControl>
-                  <FormControl isRequired>
-                    <FormLabel htmlFor='phone_number'>{modal.form.phone_number}</FormLabel>
-                    <Input id='phone_number' name='phone_number' type='tel' />
-                  </FormControl>
+                  {locale === 'ko' && (
+                    <FormControl isRequired>
+                      <FormLabel htmlFor='phone_number'>{modal.form.phone_number}</FormLabel>
+                      <Input
+                        id='phone_number'
+                        name='phone_number'
+                        type='tel'
+                        placeholder='+82-10-XXXX-XXXX'
+                        pattern='\+82[- ]10[- ][0-9]{4}[- ][0-9]{4}'
+                      />
+                    </FormControl>
+                  )}
 
                   <FormControl isRequired>
                     <FormLabel htmlFor='email'>{modal.form.email}</FormLabel>
                     <Input id='email' name='email' type='email' />
                   </FormControl>
 
-                  <FormControl display='flex' gap='2'>
-                    <Checkbox
-                      isRequired
-                      size='lg'
-                      value={true}
-                      type='checkbox'
-                      name='agree_to_terms'
-                      id='agree_to_terms'
-                    />
-                    <FormLabel
-                      htmlFor='agree_to_terms'
-                      m='0'
-                      _after={{ content: "'*'", color: 'red.500', marginInlineStart: 1 }}
-                    >
-                      {modal.form.terms.label}
-                    </FormLabel>
+                  <Flex gap='2'>
+                    <FormControl display='inline-flex' gap='2' w='auto'>
+                      <Checkbox
+                        isRequired
+                        size='lg'
+                        value={true}
+                        type='checkbox'
+                        name='agree_to_terms'
+                        id='agree_to_terms'
+                      />
+                      <FormLabel
+                        htmlFor='agree_to_terms'
+                        m='0'
+                        _after={{ content: "'*'", color: 'red.500', marginInlineStart: 1 }}
+                      >
+                        {modal.form.terms.label}
+                      </FormLabel>
+                    </FormControl>
                     <Button
                       color='blue.300'
                       variant='link'
@@ -141,7 +150,7 @@ export default function AuthModal() {
                     >
                       {modal.form.terms.link}
                     </Button>
-                  </FormControl>
+                  </Flex>
                   <Collapse in={isOpenTerms} animateOpacity>
                     <OrderedList p='2' bg='blue.50' rounded='md' m='0' listStylePos='inside' fontSize='sm'>
                       {modal.form.terms.ul.map((li, i) => (
@@ -152,7 +161,7 @@ export default function AuthModal() {
                     </OrderedList>
                   </Collapse>
 
-                  <Button colorScheme='blue' bg='brand.main' type='submit' isLoading={loading} isDisabled={disabled}>
+                  <Button colorScheme='blue' bg='brand.main' type='submit' isLoading={loading}>
                     {modal.form.submit}
                   </Button>
                 </Flex>

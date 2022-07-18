@@ -1,8 +1,6 @@
 import { Container, Box, Heading, Text, UnorderedList, ListItem } from '@chakra-ui/react';
-import { useTranslationContext } from '../../context/translation';
 
-export default function Description() {
-  const { description } = useTranslationContext();
+export default function Description({ text }) {
   return (
     <Box as='section'>
       <Container maxW='container.md' py='20' textAlign='center'>
@@ -15,7 +13,7 @@ export default function Description() {
           borderRadius='lg'
           bgGradient='linear(to-r, whiteAlpha.200, transparent)'
         >
-          <Text>{description.card1.p}</Text>
+          <Text>{text.card1.p}</Text>
         </Box>
         <Box
           px={{ base: 4, md: 10 }}
@@ -26,10 +24,10 @@ export default function Description() {
           bgGradient='linear(to-r, whiteAlpha.200, transparent)'
         >
           <Heading as='h3' mb='4'>
-            {description.card2.h3}
+            {text.card2.h3}
           </Heading>
           <UnorderedList listStylePosition='inside' m='0' listStyleType={`'- '`}>
-            {description.card2.ul.map((li) => (
+            {text.card2.ul.map((li) => (
               <ListItem key={li}>{li}</ListItem>
             ))}
           </UnorderedList>

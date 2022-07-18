@@ -12,7 +12,7 @@ let options = {
 
 export default async function handler({ method, body }, res) {
   if (method !== 'POST') return res.status(405).send({ message: 'Only POST allowed' });
-
+  const { name, email, device_type, phone_number, locale } = body;
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -31,7 +31,18 @@ export default async function handler({ method, body }, res) {
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: 'A1:E1',
       valueInputOption: 'USER_ENTERED',
-      requestBody: { values: [[...Object.values(body), new Date().toLocaleTimeString([], options)]] },
+      requestBody: {
+        values: [
+          [
+            name,
+            email,
+            "'" + (phone_number ?? 'International'),
+            device_type,
+            locale,
+            new Date().toLocaleTimeString([], options),
+          ],
+        ],
+      },
     });
 
     return res.status(200).json({ message: 'Sign up successful' });
