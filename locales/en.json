@@ -1,23 +1,26 @@
 {
-  "head": { "title": "en 사전 참가 신청 페이지", "description": "사전 참가 신청 페이지" },
+  "head": {
+    "title": "Metaverse SIGNIS World Congress Pre-registration",
+    "description": "The SIGNIS World Congress 2022, with the theme of “Peace in the Digital World”, will be held both offline and online through a metaverse platform due to the restrictions caused by the COVID-19 pandemic. The Metaverse SIGNIS World Congress will enable 5 billion Gen Zs and Millennials as well as 1.3 billion Catholics around the world to participate in the event and to communicate one another. Join the Metaverse SIGNIS World Congress and enjoy your digital Catholic experience!"
+  },
   "header": {
     "swcLink": "SWC2022 공식사이트"
   },
   "hero": {
-    "h1": "Pre-registration for Metaverse Signis General Assembly is in progress!",
-    "date": "일시 : 2022년  8월 15일 ~ 8월 18일",
-    "btn": "지금 사전 참가 신청하기"
+    "h1": "Pre-register for the Metaverse SIGNIS World Congress!",
+    "date": "Date: 15-18 August 2022",
+    "btn": "Pre-register Now"
   },
   "description": {
     "card1": {
-      "p": "디지털 세상의 평화라는 주제로 열리는 시그니스 총회는 코로나 펜데믹 영향으로 메타버스 플랫폼을 활용하여, 전세계 13억 가톨릭 신자와 50억의 MZ세대가 만나고 소통할 수 있도록 온/오프라인으로 병행하여 개최됩니다. 오프라인 행사 참여가 어려운 가톨릭 신자분들은 메타버스 플랫폼으로 거리의 제한 없이 디지털 가톨릭 공간을 경험해보세요"
+      "p": "The SIGNIS World Congress 2022, with the theme of “Peace in the Digital World”, will be held both offline and online through a metaverse platform due to the restrictions caused by the COVID-19 pandemic. The Metaverse SIGNIS World Congress will enable 5 billion Gen Zs and Millennials as well as 1.3 billion Catholics around the world to participate in the event and to communicate one another. Join the Metaverse SIGNIS World Congress and enjoy your digital Catholic experience!"
     },
     "card2": {
-      "h3": "사전유의사항 ",
+      "h3": "A few notes in advance",
       "ul": [
-        "메타버스 이용 관련 안내는 사전 예약 완료하신 분들에게 문자로 발송됩니다",
-        "한국 이외의 국가 신청자는 안내 메일로 발송되며, 스팸 메일로 분류될 수 있습니다",
-        "메타버스 시그니스 총회 참석이 가능한 앱이 출시되면, 사전 예고 없이 사전신청 홈페이지 내 다운로드 링크가 추가될 수 있습니다"
+        "Those who completed the pre-registration will receive an SMS message with information about the Metaverse SIGNIS World Congress platform",
+        "Those who completed the pre-registration outside Korea will receive an email instead. If you do not see the email in your inbox, please check your spam or junk mail folder",
+        "With the official release of the Metaverse SIGNIS World Congress application, a download link may be added to this pre-registration website without prior notice"
       ]
     }
   },
@@ -25,7 +28,7 @@
     "h2": "Our Partners"
   },
   "modal": {
-    "title": " Sign up!",
+    "title": "Sign up!",
     "form": {
       "device_type": {
         "label": "Your device type",
@@ -38,7 +41,7 @@
       "phone_number": "Phone number",
       "email": "Email",
       "terms": {
-        "label": "Agree to terms",
+        "label": "Agree to collection and processing of personal information",
         "link": "See terms",
         "ul": [
           "개인정보 수집 및 이용 안내 동의\nSIGNIS World Congress 2022 의 메타버스 서비스 운영사인 GG56 Korea는 메타버스 상에서 진행되는 시그니스 총회 안내를 위해 다음과 같은 개인정보를 수집하고 있습니다. 개인정보 수집을 거부하는 경우 사전 참가 안내 정보를 수신 받을 수 없습니다.\n*수집하고자 하는 항목: 이름 / 이메일 / OS /이벤트 참여내역\n*개인정보 수집 목적: 사전예약 이벤트 참여, 업데이트 알림 SMS 또는 메일 발송\n*보유 및 이용 기간: 시그니스 총회 종료 후 3개월 이내 폐기(단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 관련 법령에 따라 보관)",
