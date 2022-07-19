@@ -56,7 +56,7 @@ export default function Partners({ text }) {
                 <Image src={val} alt={`${key} logo`} placeholder='blur' />
               </Box>
             ))}
-            <Grid placeItems='center' p='2' fontWeight='bold' color='black'>
+            <Grid as='li' placeItems='center' p='2' fontWeight='bold' color='black'>
               한국가톨릭커뮤니케이션협회
             </Grid>
           </Flex>

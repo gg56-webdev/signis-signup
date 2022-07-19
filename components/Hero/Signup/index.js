@@ -41,8 +41,6 @@ export default function AuthModal({ text }) {
     for (const [k, v] of formData) {
       formObj[k] = v.toString();
     }
-
-    console.log(formObj);
     try {
       const res = await fetch('/api/submit', {
         method: 'POST',
@@ -113,7 +111,7 @@ export default function AuthModal({ text }) {
                         name='phone_number'
                         type='tel'
                         placeholder='+82-10-XXXX-XXXX'
-                        pattern='\+82[- ]10[- ][0-9]{4}[- ][0-9]{4}'
+                        pattern='\+82[- ]?10[- ]?[0-9]{4}[- ]?[0-9]{4}'
                       />
                     </FormControl>
                   )}

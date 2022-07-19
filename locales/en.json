@@ -28,10 +28,10 @@
     "h2": "Our Partners"
   },
   "modal": {
-    "title": "Sign up!",
+    "title": "Metaverse SIGNIS World Congress",
     "form": {
       "device_type": {
-        "label": "Your device type",
+        "label": "Your device's OS",
         "radios": {
           "ios": "iOS",
           "android": "Android"
@@ -52,7 +52,7 @@
     },
     "submitSuccess": {
       "title": "Application submitted!",
-      "text": "Thanks for submitting your application."
+      "text": "Thank you for submitting your application"
     }
   }
 }

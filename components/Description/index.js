@@ -23,9 +23,7 @@ export default function Description({ text }) {
           borderRadius='lg'
           bgGradient='linear(to-r, whiteAlpha.200, transparent)'
         >
-          <Heading as='h3' mb='4'>
-            {text.card2.h3}
-          </Heading>
+          <Heading mb='4'>{text.card2.h3}</Heading>
           <UnorderedList listStylePosition='inside' m='0' listStyleType={`'- '`}>
             {text.card2.ul.map((li) => (
               <ListItem key={li}>{li}</ListItem>

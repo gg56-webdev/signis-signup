@@ -28,10 +28,10 @@
     "h2": "파트너"
   },
   "modal": {
-    "title": "Sign up!",
+    "title": "메타버스 시그니스 총회",
     "form": {
       "device_type": {
-        "label": "Your device type",
+        "label": "모바일 운영 체제",
         "radios": {
           "ios": "iOS",
           "android": "Android"
@@ -51,8 +51,8 @@
       "submit": "신청하기"
     },
     "submitSuccess": {
-      "title": "Application submitted!",
-      "text": "Thanks for submitting your application."
+      "title": "성공!",
+      "text": "제출이 완료되었습니다"
     }
   }
 }
