@@ -39,8 +39,13 @@ export default function AuthModal({ text }) {
     const formData = new FormData(e.target);
     const formObj = {};
     for (const [k, v] of formData) {
+      if (k === 'last_name' && v !== '') {
+        setLoading(true);
+        return;
+      }
       formObj[k] = v.toString();
     }
+    console.log(formObj);
     try {
       const res = await fetch('/api/submit', {
         method: 'POST',
@@ -123,14 +128,7 @@ export default function AuthModal({ text }) {
 
                   <Flex gap='2'>
                     <FormControl display='inline-flex' gap='2' w='auto'>
-                      <Checkbox
-                        isRequired
-                        size='lg'
-                        value={true}
-                        type='checkbox'
-                        name='agree_to_terms'
-                        id='agree_to_terms'
-                      />
+                      <Checkbox isRequired size='lg' type='checkbox' name='agree_to_terms' id='agree_to_terms' />
                       <FormLabel
                         htmlFor='agree_to_terms'
                         m='0'
@@ -158,10 +156,28 @@ export default function AuthModal({ text }) {
                       ))}
                     </OrderedList>
                   </Collapse>
+                  <FormControl display='inline-flex' gap='2' w='auto'>
+                    <Checkbox
+                      isRequired
+                      size='lg'
+                      type='checkbox'
+                      value='yes'
+                      name='agree_to_reservation'
+                      id='agree_to_reservation'
+                    />
+                    <FormLabel
+                      htmlFor='agree_to_reservation'
+                      m='0'
+                      _after={{ content: "'*'", color: 'red.500', marginInlineStart: 1 }}
+                    >
+                      {modal.form.reservation}
+                    </FormLabel>
+                  </FormControl>
 
                   <Button colorScheme='blue' bg='brand.main' type='submit' isLoading={loading}>
                     {modal.form.submit}
                   </Button>
+                  <input style={{ display: 'none' }} type='text' name='last_name' />
                 </Flex>
               </ModalBody>
             </>

@@ -12,7 +12,7 @@ let options = {
 
 export default async function handler({ method, body }, res) {
   if (method !== 'POST') return res.status(405).send({ message: 'Only POST allowed' });
-  const { name, email, device_type, phone_number, locale } = body;
+  const { name, email, device_type, phone_number, agree_to_reservation, locale } = body;
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -41,6 +41,7 @@ export default async function handler({ method, body }, res) {
             email,
             "'" + (phone_number ?? 'International'),
             device_type,
+            agree_to_reservation ?? 'no',
             locale,
             new Date().toLocaleTimeString([], options),
           ],

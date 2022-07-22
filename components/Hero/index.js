@@ -7,7 +7,7 @@ export default function Hero({ text }) {
     <Grid
       placeItems='center'
       as='section'
-      h='min(100vh - 45px, 1080px)'
+      h='clamp(500px, 100vh - 45px, 1080px)'
       backgroundImage='linear-gradient(hsl(230 37% 37% / 0.75),hsl(230 37% 37% / 0.75)), url(main-bg.webp)'
       backgroundRepeat='no-repeat'
       backgroundSize='cover'
