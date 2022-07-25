@@ -26,7 +26,7 @@ export default function Home({ text }) {
       </Head>
       <Header text={text.header} />
       <Hero text={text} />
-      {/* <Promo text={text.promo} /> */}
+      <Promo text={text.promo} />
       <Description text={text.description} />
       <Partners text={text.partners} />
       <Footer />
