@@ -1,6 +1,7 @@
-import { Box, Container, Link, LinkBox, LinkOverlay } from '@chakra-ui/react';
+import { Box, Container, Link, LinkBox, LinkOverlay, Flex } from '@chakra-ui/react';
 import Image from 'next/image';
 import swcLogo from '../../public/swc-logo.png';
+import Auth from './Auth';
 import LanguageSelect from './LanguageSelect';
 
 export default function Header() {
@@ -12,7 +13,7 @@ export default function Header() {
       color='initial'
       shadow='lg'
     >
-      <Container display='flex' justifyContent='space-between' alignItems='center' maxW='container.lg' p='2'>
+      <Container display='flex' alignItems='center' maxW='container.lg' p='2'>
         <LinkBox
           pos='relative'
           flexBasis='150px'
@@ -24,7 +25,10 @@ export default function Header() {
             <Image src={swcLogo} alt='SWC2022 Logo' layout='fill' objectFit='contain' placeholder='blur' />
           </LinkOverlay>
         </LinkBox>
-        <LanguageSelect />
+        <Flex ml='auto' align='center' gap='4'>
+          <LanguageSelect />
+          <Auth />
+        </Flex>
       </Container>
     </Box>
   );
