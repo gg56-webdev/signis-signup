@@ -63,7 +63,7 @@ export default function AuthModal({ text }) {
   };
   return (
     <>
-      <Button onClick={onOpen} colorScheme='red' bg='brand.secondary' fontSize='2xl' p='8' shadow='md'>
+      <Button onClick={onOpen} colorScheme='red' bg='brand.secondary' fontSize='2xl' p='8' shadow='md' mt='10'>
         {hero.btn}
       </Button>
 

@@ -1,4 +1,5 @@
-import { Container, Grid, Heading, Text } from '@chakra-ui/react';
+import { Button, Container, Grid, Heading, Link, Text } from '@chakra-ui/react';
+import Popup from './Popup/Popup';
 import Signup from './Signup';
 
 export default function Hero({ text }) {
@@ -13,14 +14,23 @@ export default function Hero({ text }) {
       backgroundSize='cover'
       backgroundPosition='center'
     >
-      <Container maxW='container.md' display='grid' gap='10' textAlign='center' py='10'>
+      <Container maxW='container.md' display='grid' textAlign='center' py='10'>
         <Heading as='h1' fontSize={{ base: '4xl', md: '6xl' }}>
           {hero.h1}
         </Heading>
-        <Text fontSize={{ base: 'xl' }} p='4' border='2px solid' borderRadius='lg' w='fit-content' justifySelf='center'>
+        <Text
+          fontSize={{ base: 'xl' }}
+          p='4'
+          border='2px solid'
+          borderRadius='lg'
+          w='fit-content'
+          justifySelf='center'
+          mt='10'
+        >
           {hero.date}
         </Text>
         <Signup text={text} />
+        <Popup text={hero.disclaimer} />
       </Container>
     </Grid>
   );

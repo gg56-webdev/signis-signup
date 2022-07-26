@@ -9,7 +9,13 @@
   "hero": {
     "h1": "Pre-register for the Metaverse SIGNIS World Congress!",
     "date": "Date: 15-18 August 2022",
-    "btn": "Pre-register Now"
+    "btn": "Pre-register Now",
+    "disclaimer": {
+      "1": "We will select 10 people from those who pre-registered and ",
+      "link": "provide blessed rosary",
+      "2": " by Pope Francis as a gift, so we ask for your attention.",
+      "youtube": "Video of Pope Francis' consecration of a rosary [02:00~02:20]"
+    }
   },
   "promo": { "h2": "Keep your precious blessed moments forever", "text": "Coming Soon" },
   "description": {
@@ -26,7 +32,8 @@
     }
   },
   "partners": {
-    "h2": "Our Partners"
+    "partners": "Our Partners",
+    "sponsors": "Our Sponsors"
   },
   "modal": {
     "title": "Metaverse SIGNIS World Congress",
