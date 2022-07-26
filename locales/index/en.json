@@ -4,7 +4,11 @@
     "description": "The SIGNIS World Congress 2022, with the theme of “Peace in the Digital World”, will be held both offline and online through a metaverse platform due to the restrictions caused by the COVID-19 pandemic. The Metaverse SIGNIS World Congress will enable 5 billion Gen Zs and Millennials as well as 1.3 billion Catholics around the world to participate in the event and to communicate one another. Join the Metaverse SIGNIS World Congress and enjoy your digital Catholic experience!"
   },
   "header": {
-    "swcLink": "SWC2022 공식사이트"
+    "swcLink": "SWC2022 main page",
+    "auth": {
+      "login": "Login",
+      "signup": "Signup"
+    }
   },
   "hero": {
     "h1": "Pre-register for the Metaverse SIGNIS World Congress!",

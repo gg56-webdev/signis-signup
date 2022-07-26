@@ -1,0 +1,35 @@
+{
+  "head": {
+    "title": "Login / Signup"
+  },
+  "form": {
+    "device_type": {
+      "label": "Your device's OS",
+      "radios": {
+        "ios": "iOS",
+        "android": "Android"
+      }
+    },
+    "name": "Name",
+    "phone_number": "Phone number",
+    "email": "Email",
+    "password": "Password",
+    "terms": {
+      "label": "Agree to collection and processing of personal information",
+      "link": "See terms",
+      "ul": [
+        "Consent form for collection and use of personal information\nMetaverse service operator GG56 Korea collects the following personal information for the SIGNIS World Congress 2022 event on Metaverse. If you refuse from providing personal information, you will not be able to receive advance participation information.\n*Required: Name, Email address, OS, Event participation details\n*Purpose: Participate in advance reservation events and App update notification e-mail\n*Retention period: 90 days\n※ However, the information can be held separately if it is required for investigating accidents, resolving disputes, handling customer services, or fulfilling legal obligations.",
+        "Refusal to consent\nYou have the right to refuse to consent to the collection and use of your personal information and please be aware of that there may be disadvantages such as not being able to use the booking service for Online and Instore Planning services."
+      ]
+    },
+    "login": { "heading": "Login", "action": "Login", "secondary": "Create new account" },
+    "signup": { "heading": "Sign up", "action": "Sign up", "secondary": "Already have account" },
+    "reset": {
+      "heading": "Reset password",
+      "action": "Send",
+      "secondary": "Try to login",
+      "alert": "Please check your inbox for password recovery message."
+    },
+    "forgot": "Forgot password"
+  }
+}

@@ -4,7 +4,7 @@ import swcLogo from '../../public/swc-logo.png';
 import Auth from './Auth';
 import LanguageSelect from './LanguageSelect';
 
-export default function Header() {
+export default function Header({ text }) {
   return (
     <Box
       as='header'
@@ -26,8 +26,8 @@ export default function Header() {
           </LinkOverlay>
         </LinkBox>
         <Flex ml='auto' align='center' gap='4'>
+          <Auth text={text.auth} />
           <LanguageSelect />
-          <Auth />
         </Flex>
       </Container>
     </Box>

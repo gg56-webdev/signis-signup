@@ -1,18 +1,9 @@
 import Head from 'next/head';
 import { Description, Footer, Header, Hero, Partners, Promo } from '../components';
-
-const getTranslation = async (locale) => {
-  switch (locale) {
-    case 'en':
-      return require('../locales/en.json');
-
-    default:
-      return require('../locales/ko.json');
-  }
-};
+import { getTranslation } from '../utils/getTranslation';
 
 export async function getStaticProps({ locale }) {
-  const text = await getTranslation(locale);
+  const text = await getTranslation(locale, 'index');
   return { props: { text } };
 }
 
