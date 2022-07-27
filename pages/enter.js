@@ -95,7 +95,9 @@ export default function Enter({ text: { form, head } }) {
         px='6'
         onSubmit={handleSubmit}
       >
-        <Heading>{form[screen].heading}</Heading>
+        <Heading color='brand.main' textAlign='center'>
+          {form[screen].heading}
+        </Heading>
 
         {screen === 'signup' && (
           <>
