@@ -227,6 +227,25 @@ export default function Enter({ text: { form, head } }) {
             </Collapse>
           </>
         )}
+        {screen === 'signup' && (
+          <FormControl display='inline-flex' gap='2' w='auto'>
+            <Checkbox
+              isRequired
+              size='lg'
+              type='checkbox'
+              value='yes'
+              name='agree_to_reservation'
+              id='agree_to_reservation'
+            />
+            <FormLabel
+              htmlFor='agree_to_reservation'
+              m='0'
+              _after={{ content: "'*'", color: 'red.500', marginInlineStart: 1 }}
+            >
+              {form.reservation}
+            </FormLabel>
+          </FormControl>
+        )}
         <Stack mt='2'>
           {error && (
             <Alert status='error' borderRadius='md'>

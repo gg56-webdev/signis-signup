@@ -22,6 +22,8 @@
         "Refusal to consent\nYou have the right to refuse to consent to the collection and use of your personal information and please be aware of that there may be disadvantages such as not being able to use the booking service for Online and Instore Planning services."
       ]
     },
+    "reservation": "Agree to character's pre-blessing reservation",
+
     "login": { "heading": "Login", "action": "Login", "secondary": "Create new account" },
     "signup": { "heading": "Sign up", "action": "Sign up", "secondary": "Already have account" },
     "reset": {

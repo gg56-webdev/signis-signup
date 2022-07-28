@@ -22,6 +22,8 @@
         "개인정보 제공 및 이용 안내 동의\n사전예약 서비스 제공을 위해 개인 정보를 다음과 같이 제공합니다.\n*제공 업체: GG56 Korea 외 별도 제공 업체 없음\n*개인정보 제공 목적: App 업데이트 알림 안내 SMS 또는 메일 발송"
       ]
     },
+    "reservation": "캐릭터 사전 축복 예약하기",
+
     "login": { "heading": "Login", "action": "Login", "secondary": "Create new account" },
     "signup": { "heading": "Sign up", "action": "Sign up", "secondary": "Already have account" },
     "reset": { "heading": "Reset password", "action": "Send", "secondary": "Try to login" },

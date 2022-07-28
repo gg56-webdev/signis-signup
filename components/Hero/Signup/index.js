@@ -20,6 +20,8 @@ import {
   Checkbox,
   Collapse,
   FormControl,
+  InputGroup,
+  InputLeftAddon,
   FormLabel,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
@@ -111,13 +113,17 @@ export default function AuthModal({ text }) {
                   {locale === 'ko' && (
                     <FormControl isRequired>
                       <FormLabel htmlFor='phone_number'>{modal.form.phone_number}</FormLabel>
-                      <Input
-                        id='phone_number'
-                        name='phone_number'
-                        type='tel'
-                        placeholder='+82-10-XXXX-XXXX'
-                        pattern='\+82[- ]?10[- ]?[0-9]{4}[- ]?[0-9]{4}'
-                      />
+                      <InputGroup>
+                        <InputLeftAddon children='010' />
+
+                        <Input
+                          id='phone_number'
+                          name='phone_number'
+                          type='tel'
+                          placeholder='####-####'
+                          pattern='[0-9]{4}[- ]?[0-9]{4}'
+                        />
+                      </InputGroup>
                     </FormControl>
                   )}
 

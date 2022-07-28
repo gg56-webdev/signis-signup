@@ -22,12 +22,12 @@ export function useUser() {
   };
 
   const signUp = async (email, password, userData) => {
-    const [{ createUserWithEmailAndPassword }, { setDoc }] = await Promise.all([
+    const [{ createUserWithEmailAndPassword }, { setDoc, serverTimestamp }] = await Promise.all([
       import('firebase/auth'),
       import('firebase/firestore'),
     ]);
     const { user } = await createUserWithEmailAndPassword(auth, email, password);
-    await setDoc(await getUserDocRef(user.uid), { ...userData });
+    await setDoc(await getUserDocRef(user.uid), { ...userData, created_at: serverTimestamp() });
   };
 
   const resetPassword = async (email) => {

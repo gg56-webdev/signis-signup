@@ -1,5 +1,6 @@
 import { Box, Text, Container, Heading, keyframes } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import EventPopup from './EventPopup';
 
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
@@ -119,7 +120,7 @@ export default function Promo({ text }) {
           ))}
         </MotionHeading>
 
-        <MotionText
+        {/* <MotionText
           variants={textVariants}
           w='fit-content'
           letterSpacing='3px'
@@ -143,7 +144,8 @@ export default function Promo({ text }) {
           }}
         >
           {text.text}
-        </MotionText>
+        </MotionText> */}
+        <EventPopup />
       </MotionContainer>
     </MotionBox>
   );
