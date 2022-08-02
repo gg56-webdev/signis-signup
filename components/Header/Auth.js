@@ -1,9 +1,9 @@
 import { Box, Button, Spinner } from '@chakra-ui/react';
-import { useUser } from '../../hooks/useUser';
+import { useAuthContext } from '../../context/auth';
 import NLink from 'next/link';
 
 export default function Auth({ text }) {
-  const { user, loading } = useUser();
+  const { user, loading } = useAuthContext();
   if (loading) return <Spinner color='blue' />;
   if (!user)
     return (

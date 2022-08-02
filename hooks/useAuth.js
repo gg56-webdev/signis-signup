@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../lib/firebase';
 
-export function useUser() {
-  const [user, setUser] = useState();
+export function useAuth() {
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState();
+  const [userData, setUserData] = useState();
 
   const logout = async () => {
     const { signOut } = await import('firebase/auth');
@@ -35,16 +36,22 @@ export function useUser() {
     await sendPasswordResetEmail(auth, email);
   };
 
+  const getUserDoc = async (userId) => {
+    const { getDoc } = await import('firebase/firestore');
+    setUserData((await getDoc(await getUserDocRef(userId))).data());
+  };
+
   useEffect(() => {
-    let unsub = onAuthStateChanged(auth, (user) => {
+    const unsubFromAuth = onAuthStateChanged(auth, async (user) => {
+      if (user) await getUserDoc(user.uid);
       setUser(user);
       setLoading(false);
     });
 
     return () => {
-      unsub();
+      unsubFromAuth();
     };
   }, []);
 
-  return { user, loading, login, signUp, logout, resetPassword };
+  return { user, userData, loading, login, signUp, logout, resetPassword };
 }

@@ -1,0 +1,9 @@
+{
+  "auth": { "logout": "Logout" },
+  "nftCard": {
+    "name": "Bracelet with Pope's Blessing",
+    "disclaimer": "The cost of owning the NFT (minting + transfer) included.",
+    "buy": "Buy NFT",
+    "purchased": "Your wallet address has been registered. The NFT will be sent to the wallet address by 08/24~08/29"
+  }
+}

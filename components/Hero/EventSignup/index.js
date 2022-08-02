@@ -27,10 +27,10 @@ import {
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-export default function AuthModal({ text }) {
+export default function EventSignupModal({ text, eventSignupDisclosure }) {
   const { hero, modal } = text;
   const { locale } = useRouter();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = eventSignupDisclosure;
   const { isOpen: isOpenTerms, onToggle } = useDisclosure();
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -114,7 +114,7 @@ export default function AuthModal({ text }) {
                     <FormControl isRequired>
                       <FormLabel htmlFor='phone_number'>{modal.form.phone_number}</FormLabel>
                       <InputGroup>
-                        <InputLeftAddon children='010' />
+                        <InputLeftAddon>010</InputLeftAddon>
 
                         <Input
                           id='phone_number'

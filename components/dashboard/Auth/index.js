@@ -1,7 +1,7 @@
 import { Box, Button } from '@chakra-ui/react';
-import { useUserContext } from '../../../context/user';
-export default function Auth() {
-  const { user, logout } = useUserContext();
+import { useAuthContext } from '../../../context/auth';
+export default function Auth({ text }) {
+  const { user, logout } = useAuthContext();
   return (
     <Box
       borderRadius='lg'
@@ -12,12 +12,13 @@ export default function Auth() {
       borderColor='brand.main'
       maxW='container.sm'
       mx='auto'
+      mb='20'
     >
       <Box color='brand.main' fontSize='xl' fontWeight='bold' mb='2'>
         {user.email}
       </Box>
       <Button variant='ghost' colorScheme='blue' onClick={logout}>
-        Logout
+        {text.logout}
       </Button>
     </Box>
   );

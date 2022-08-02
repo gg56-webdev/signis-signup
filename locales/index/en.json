@@ -21,7 +21,56 @@
       "youtube": "Video of Pope Francis' consecration of a rosary [02:00~02:20]"
     }
   },
-  "promo": { "h2": "Keep your precious blessed moments forever", "text": "Coming Soon" },
+  "promo": {
+    "h2": "Keep your precious blessed moments forever",
+    "disclaimer": "This event is held for those who pre-order to get blessing on the character",
+    "btn": "Own NFT",
+    "text": "Coming Soon",
+    "eventPopup": {
+      "heading": "Join the Metaverse SIGNIS and get the chance to receive the blessed Rosary and own NFT!",
+      "description": "For all those who pre-registered, we perform the Gleam mission and airdrop MSOT worth 10,000 won to all those who own NFTs",
+      "col1": [
+        ["Period", ["August 13, 2022 (Wed) ~ August 18, 2022 (Thu)"]],
+        ["Requirement", ["Those who have pre-registered will 100% win if you complete the mission and own the NFT"]],
+        ["Mission 1", ["Complete all the missions in Gleam"]],
+        ["Mission 2", ["Complete application for owing NFT"]],
+        [
+          "Payment Standard",
+          [
+            "If you complete only mission 1, you will receive an MSOT worth 3,000 won",
+            "If you complete only mission 2, you will receive an MSOT worth 7,000 won",
+            "If you complete all missions 1 and 2, you will receive an MSOT worth 10,000 won",
+            "* MOST airdrop will be based on the market price at the time of the payment"
+          ]
+        ],
+        [
+          "Payment Date",
+          [
+            "Payment instruction will be sent to the e-mail address you applied with, On August 26, 2022",
+            "NFT delivery and airdrop payment will be completed before August 31, 2022"
+          ]
+        ]
+      ],
+      "col2": {
+        "nftCard": {
+          "name": "Bracelet with Pope's Blessing",
+          "disclaimer": "The cost of owning the NFT (minting + transfer) included."
+        }
+      },
+      "btn1": "Pre-register",
+      "btn2": "Participate in Gleam mission (mission 1)",
+      "btn3": "Own NFT (mission 2)",
+      "note": {
+        "heading": "Notice",
+        "ul": [
+          "The owned NFT can be resold but note that it is a global event that is held for those who respect the purpose of issuing the NFT with a symbolic meaning which is bringing the joy of joining the event and owning NFT at a same time",
+          "We are not responsible for any damage caused by incorrect input of your personal wallet address",
+          "NFT payment is not possible if you do not agree to the terms and conditions of NFT use and transaction",
+          "For the personal wallet address (ex: Metamask), you must enter the whitelisted wallet address registered on the exchange"
+        ]
+      }
+    }
+  },
   "description": {
     "card1": {
       "p": "The SIGNIS World Congress 2022, with the theme of “Peace in the Digital World”, will be held both offline and online through a metaverse platform due to the restrictions caused by the COVID-19 pandemic. The Metaverse SIGNIS World Congress will enable 5 billion Gen Zs and Millennials as well as 1.3 billion Catholics around the world to participate in the event and to communicate one another. Join the Metaverse SIGNIS World Congress and enjoy your digital Catholic experience!"

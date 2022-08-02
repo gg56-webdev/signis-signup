@@ -1,13 +1,13 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import UserContextProvide from '../context/user';
+import AuthContextProvider from '../context/auth';
 import theme from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <UserContextProvide>
+      <AuthContextProvider>
         <Component {...pageProps} />
-      </UserContextProvide>
+      </AuthContextProvider>
     </ChakraProvider>
   );
 }

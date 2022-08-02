@@ -24,9 +24,9 @@
     },
     "reservation": "캐릭터 사전 축복 예약하기",
 
-    "login": { "heading": "Login", "action": "Login", "secondary": "Create new account" },
-    "signup": { "heading": "Sign up", "action": "Sign up", "secondary": "Already have account" },
-    "reset": { "heading": "Reset password", "action": "Send", "secondary": "Try to login" },
-    "forgot": "Forgot password"
+    "login": { "heading": "로그인", "action": "로그인", "secondary": "가입하기" },
+    "signup": { "heading": "가입하기", "action": "가입하기", "secondary": "로그인" },
+    "reset": { "heading": "비밀번호 찾기", "action": "비밀번호를 재설정하세요", "secondary": "로그인" },
+    "forgot": "비밀번호 찾기"
   }
 }

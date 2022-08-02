@@ -1,0 +1,9 @@
+{
+  "title": "Add Wallet",
+  "form": {
+    "wallet": "지갑주소",
+    "agreeToTerms": "개인정보 수집 동의",
+    "next": "다음"
+  },
+  "terms": []
+}

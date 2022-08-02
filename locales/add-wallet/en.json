@@ -1,0 +1,9 @@
+{
+  "title": "Add Wallet",
+  "form": {
+    "wallet": "Wallet Address",
+    "agreeToTerms": "Agree to Terms and Conditions",
+    "next": "Next"
+  },
+  "terms": []
+}

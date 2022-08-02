@@ -1,8 +1,8 @@
 import { Button, Container, Grid, Heading, Link, Text } from '@chakra-ui/react';
 import Popup from './Popup/Popup';
-import Signup from './Signup';
+import EventSignupModal from './EventSignup';
 
-export default function Hero({ text }) {
+export default function Hero({ text, eventSignupDisclosure }) {
   const { hero } = text;
   return (
     <Grid
@@ -13,6 +13,7 @@ export default function Hero({ text }) {
       backgroundRepeat='no-repeat'
       backgroundSize='cover'
       backgroundPosition='center'
+      color='white'
     >
       <Container maxW='container.md' display='grid' textAlign='center' py='10'>
         <Heading as='h1' fontSize={{ base: '4xl', md: '6xl' }}>
@@ -29,7 +30,7 @@ export default function Hero({ text }) {
         >
           {hero.date}
         </Text>
-        <Signup text={text} />
+        <EventSignupModal text={text} eventSignupDisclosure={eventSignupDisclosure} />
         <Popup text={hero.disclaimer} />
       </Container>
     </Grid>

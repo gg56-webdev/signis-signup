@@ -14,7 +14,7 @@ const colors = {
 
 const styles = {
   global: {
-    body: { wordBreak: 'keep-all', bg: 'brand.main', color: 'white' },
+    body: { wordBreak: 'keep-all', bg: 'brand.main' },
   },
 };
 

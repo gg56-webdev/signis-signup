@@ -3,7 +3,7 @@ import { Container, Box, Heading, Text, UnorderedList, ListItem } from '@chakra-
 export default function Description({ text }) {
   return (
     <Box as='section'>
-      <Container maxW='container.md' py='20' textAlign='center'>
+      <Container maxW='container.md' py='20' textAlign='center' color='white'>
         <Box
           mb='10'
           px={{ base: 4, md: 10 }}

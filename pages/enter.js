@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useReducer, useEffect } from 'react';
 import {
   OrderedList,
   ListItem,
@@ -25,7 +25,7 @@ import {
   InputLeftAddon,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import { useUserContext } from '../context/user';
+import { useAuthContext } from '../context/auth';
 import { getTranslation } from '../utils/getTranslation';
 import { useRouter } from 'next/router';
 
@@ -35,7 +35,7 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Enter({ text: { form, head } }) {
-  const { signUp, login, resetPassword } = useUserContext();
+  const { signUp, login, resetPassword, user } = useAuthContext();
   const { push, locale } = useRouter();
   const { isOpen: isOpenTerms, onToggle } = useDisclosure();
 
@@ -74,6 +74,12 @@ export default function Enter({ text: { form, head } }) {
       dispatch({ type: FORM_ACTIONS.TOGGLE_LOADING });
     }
   };
+
+  useEffect(() => {
+    if (user && !loading) {
+      push('/dashboard', '/dashboard', { locale });
+    }
+  }, [user, loading, push, locale]);
 
   return (
     <>
@@ -130,7 +136,7 @@ export default function Enter({ text: { form, head } }) {
               <FormControl isRequired>
                 <FormLabel htmlFor='phone_number'>{form.phone_number}</FormLabel>
                 <InputGroup>
-                  <InputLeftAddon children='010' />
+                  <InputLeftAddon>010</InputLeftAddon>
                   <Input
                     id='phone_number'
                     name='phone_number'

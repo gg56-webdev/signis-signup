@@ -55,7 +55,7 @@ from {
      text-shadow: 0 0 24px hsl(230 50% 100% / 100%);
     -webkit-text-stroke-color: hsl(230 37% 90% / 100%);}`;
 
-export default function Promo({ text }) {
+export default function Promo({ text, eventSignupOnOpen }) {
   return (
     <MotionBox
       as='section'
@@ -69,6 +69,7 @@ export default function Promo({ text }) {
       initial='offscreen'
       whileInView='onscreen'
       viewport={{ once: true, amount: 0.6 }}
+      color='white'
     >
       <MotionContainer
         variants={containerVariants}
@@ -119,6 +120,15 @@ export default function Promo({ text }) {
             </MotionBox>
           ))}
         </MotionHeading>
+        <MotionText
+          variants={headingVariants}
+          _before={{ content: '"* "' }}
+          mt='2'
+          color='white'
+          textShadow='0px 0px 15px hsl(230 37% 25% / 100%)'
+        >
+          {text.disclaimer}
+        </MotionText>
 
         {/* <MotionText
           variants={textVariants}
@@ -145,7 +155,7 @@ export default function Promo({ text }) {
         >
           {text.text}
         </MotionText> */}
-        <EventPopup />
+        <EventPopup text={text.eventPopup} eventSignupOnOpen={eventSignupOnOpen} btnText={text.btn} />
       </MotionContainer>
     </MotionBox>
   );
