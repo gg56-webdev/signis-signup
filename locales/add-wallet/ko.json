@@ -1,7 +1,9 @@
 {
   "title": "Add 지갑주소",
   "form": {
-    "wallet": "메타마스크 지갑주소",
+    "wallet": "메타마스크(MetaMask) 지갑주소",
+    "metamaskText": "메타마스크(MetaMask)는 크롬(Chrome) 확장 프로그램 또는 파이어폭스(Firefox) 브라우저의 추가 기능으로 사용할 수 있습니다. 기본적으로 이더리움 기반으로 발행된 토큰의 지갑으로 사용할 수 있으며, 지갑 주소(Wallet Address)를 사용하여 이더 또는 토큰을 보내고 받을 수 있습니다.",
+    "metamaskDownload": "메타마스크 다운로드",
     "agreeToTerms": "개인정보 수집 동의",
     "next": "다음"
   },

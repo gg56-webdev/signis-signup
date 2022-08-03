@@ -1,7 +1,16 @@
 import {
   Box,
   Button,
+  Flex,
   Container,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  Text,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
   FormControl,
   FormLabel,
   Input,
@@ -9,7 +18,10 @@ import {
   OrderedList,
   ListItem,
   UnorderedList,
+  IconButton,
+  Link,
 } from '@chakra-ui/react';
+import { QuestionIcon } from '@chakra-ui/icons';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { useAuthContext } from '../../context/auth';
@@ -86,7 +98,33 @@ export default function AddWallet({ text }) {
         onSubmit={handleSubmit}
       >
         <FormControl isRequired>
-          <FormLabel htmlFor='wallet_address'>{form.wallet}</FormLabel>
+          <Flex alignItems='center'>
+            <FormLabel htmlFor='wallet_address'>{form.wallet}</FormLabel>
+            <Popover>
+              <PopoverTrigger>
+                <IconButton
+                  mb='2'
+                  size='sm'
+                  isRound
+                  variant='ghost'
+                  colorScheme='blue'
+                  aria-label='Show information about adding crypto wallet'
+                  icon={<QuestionIcon boxSize='4' />}
+                />
+              </PopoverTrigger>
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverCloseButton />
+                <PopoverHeader fontWeight='bold'>{form.wallet}</PopoverHeader>
+                <PopoverBody fontSize='md' textAlign='left' bg='gray.50'>
+                  <Text>{form.metamaskText}</Text>
+                  <Link href='https://metamask.io/download/' isExternal color='blue' fontWeight='bold'>
+                    {form.metamaskDownload}
+                  </Link>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+          </Flex>
           <Input
             id='wallet_address'
             name='wallet_address'

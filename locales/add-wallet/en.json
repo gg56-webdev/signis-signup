@@ -2,6 +2,8 @@
   "title": "Add Wallet",
   "form": {
     "wallet": "MetaMask Wallet Address",
+    "metamaskText": "MetaMask is a browser plugin, available as the MetaMask Chrome extension or Firefox Add-on. At its core, it serves as an Ethereum wallet: By installing it, you will get access to a unique Ethereum public address, with which you can start sending and receiving ether or tokens.",
+    "metamaskDownload": "Download MetaMask",
     "agreeToTerms": "Agree to Terms and Conditions",
     "next": "Next"
   },
