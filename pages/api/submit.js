@@ -39,7 +39,7 @@ export default async function handler({ method, body }, res) {
           [
             name,
             email,
-            "'" + ('010' + phone_number ?? 'International'),
+            phone_number ? "'010" + phone_number : 'International',
             device_type,
             agree_to_reservation ?? 'no',
             locale,
