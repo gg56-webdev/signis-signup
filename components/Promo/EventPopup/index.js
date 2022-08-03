@@ -67,7 +67,7 @@ export default function EventPopup({ text, eventSignupOnOpen, btnText }) {
               {text.description}
             </Text>
             <Grid gridTemplateColumns={{ base: '1fr', md: '1.75fr auto 1fr' }} gap='2' p='4'>
-              <Stack bg='cyan.50' borderRadius='xl' shadow='lg' border='1px' borderColor='blue.100' p='4'>
+              <Stack bg='blue.50' borderRadius='xl' shadow='lg' border='1px' borderColor='blue.100' p='4'>
                 <Box as='dl' display='grid' gridTemplateColumns='auto 1fr' columnGap='2' rowGap='4' h='full'>
                   {text.col1.map(([key, val]) => (
                     <Fragment key={key}>
@@ -106,11 +106,17 @@ export default function EventPopup({ text, eventSignupOnOpen, btnText }) {
               <Button colorScheme='linkedin' onClick={eventSignupOnOpen}>
                 {text.btn1}
               </Button>
-              <Button bg='brand.main' colorScheme='blue'>
+              <Button
+                as='a'
+                href='https://gleam.io/OtTqb/-event-'
+                target='_blank'
+                rel='noopener noreferrer'
+                colorScheme='linkedin'
+              >
                 {text.btn2}
               </Button>
               <NLink href='/dashboard' passHref>
-                <Button bg='brand.secondary' colorScheme='red' as='a'>
+                <Button bg='brand.main' colorScheme='blue' as='a'>
                   {text.btn3}
                 </Button>
               </NLink>

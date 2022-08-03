@@ -1,9 +1,10 @@
 {
   "auth": { "logout": "로그아웃" },
   "nftCard": {
-    "name": "Bracelet with Pope's Blessing",
+    "name": "교황님의 강복을 기념하는 묵주",
     "disclaimer": "NFT 소유에 필요한 비용(민팅+전송)이 포함되어 있습니다.",
+    "description": "시그니스 메타버스에서 교황님의 축복을 받는 순간을 NFT 묵주에 담아 간직하세요!",
     "buy": "NFT 소유하기",
-    "purchased": "Your wallet address has been registered. The NFT will be sent to the wallet address by 08/24~08/29"
+    "purchased": "지갑 주소가 등록되었습니다. NFT는 08/24~08/29까지 지갑주소로 발송됩니다."
   }
 }

@@ -14,7 +14,7 @@ export default function NftCard({ text, userWallet, isPaid = false, isPurchasabl
       display='flex'
       flexDir={{ base: 'column', sm: direction }}
       p='4'
-      bg='cyan.50'
+      bg='gray.50'
       borderRadius='xl'
       shadow='lg'
       gap='4'
@@ -65,7 +65,7 @@ export default function NftCard({ text, userWallet, isPaid = false, isPurchasabl
           </Icon>
           SIGNIS Metaverse
         </Tag>
-
+        {isPurchasable && <Text>{text.description}</Text>}
         <Box display='flex' alignItems='center' mt='auto' fontSize='lg' fontWeight='bold' gap='2'>
           {!isPaid && (
             <>
@@ -97,7 +97,7 @@ export default function NftCard({ text, userWallet, isPaid = false, isPurchasabl
         {isPurchasable &&
           (isPaid ? (
             <>
-              <Box fontSize='lg' fontWeight='bold' color='brand.main'>
+              <Box fontSize='lg' fontWeight='bold' color='brand.main' fontFamily='mono'>
                 {userWallet}
               </Box>
               <Text>{text.purchased}</Text>

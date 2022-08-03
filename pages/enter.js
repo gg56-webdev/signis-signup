@@ -53,7 +53,7 @@ export default function Enter({ text: { form, head } }) {
         case 'signup':
           const userData = { device_type, name, phone_number, email };
           await signUp(email, password, userData);
-          push('/dashboard', '/dashboard', { locale });
+          push('/', '/', { locale });
           break;
         case 'reset':
           await resetPassword(email);
@@ -77,7 +77,7 @@ export default function Enter({ text: { form, head } }) {
 
   useEffect(() => {
     if (user && !loading) {
-      push('/dashboard', '/dashboard', { locale });
+      push('/', '/', { locale });
     }
   }, [user, loading, push, locale]);
 

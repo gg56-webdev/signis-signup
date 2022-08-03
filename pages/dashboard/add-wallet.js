@@ -1,4 +1,15 @@
-import { Box, Button, Container, FormControl, FormLabel, Input, Checkbox } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Container,
+  FormControl,
+  FormLabel,
+  Input,
+  Checkbox,
+  OrderedList,
+  ListItem,
+  UnorderedList,
+} from '@chakra-ui/react';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { useAuthContext } from '../../context/auth';
@@ -101,6 +112,18 @@ export default function AddWallet({ text }) {
           {form.next}
         </Button>
       </Box>
+      <OrderedList maxW='container.sm' mx='auto' color='white' px='1'>
+        {text.terms.map(([h, ul]) => (
+          <ListItem key={h} mb='4'>
+            {h}
+            <UnorderedList listStyleType='none'>
+              {ul.map((s, index) => (
+                <ListItem key={`${h}-${index}`}>{s}</ListItem>
+              ))}
+            </UnorderedList>
+          </ListItem>
+        ))}
+      </OrderedList>
     </>
   );
 }

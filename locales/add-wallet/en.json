@@ -1,9 +1,29 @@
 {
   "title": "Add Wallet",
   "form": {
-    "wallet": "Wallet Address",
+    "wallet": "MetaMask Wallet Address",
     "agreeToTerms": "Agree to Terms and Conditions",
     "next": "Next"
   },
-  "terms": []
+  "terms": [
+    [
+      "Terms and Conditions for the Services, Transaction and Use of the NFTs",
+      [
+        "- This event is reserved for those who have agreed the terms and conditions for the services, transaction and use of the NFTs. Please check and review all the details and proceed with the payment.",
+        "- We will send an email to notify the NFT receipt date and payment method until 26th, after the 2022 SIGNIS World Congress ends.",
+        "* If you do not receive an email, please check your \"junk mail\" folder or \"spam\" folder.",
+        "- All purchased NFTs will be sent until 29th August, 2022. In case of delay in sending the NFTs, a separate notification will be sent.",
+        "- Profits will be used for operation and maintenance of SIGNIS FR."
+      ]
+    ],
+    [
+      "Investment risks and Investor protection",
+      [
+        "- The value of the NFT is not guaranteed by a specific party, and the loss will be borne by you.",
+        "- Please note that neither refund nor cancellation will be made for change of mind.",
+        "- in red",
+        "- Please contact the owner of the registered wallet address or the customer center of the exchange (red)"
+      ]
+    ]
+  ]
 }
