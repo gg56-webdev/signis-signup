@@ -1,6 +1,7 @@
 import { Button, Container, Grid, Heading, Link, Text } from '@chakra-ui/react';
 import Popup from './Popup/Popup';
 import EventSignupModal from './EventSignup';
+import Download from './Download';
 
 export default function Hero({ text, eventSignupDisclosure }) {
   const { hero } = text;
@@ -32,6 +33,7 @@ export default function Hero({ text, eventSignupDisclosure }) {
         </Text>
         <EventSignupModal text={text} eventSignupDisclosure={eventSignupDisclosure} />
         <Popup text={hero.disclaimer} />
+        <Download />
       </Container>
     </Grid>
   );
