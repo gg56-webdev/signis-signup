@@ -57,6 +57,7 @@ export default function AddWallet({ text }) {
         method: 'POST',
         body: JSON.stringify({
           userId: user.uid,
+          locale,
         }),
         headers: { 'Content-Type': 'application/json' },
       });
