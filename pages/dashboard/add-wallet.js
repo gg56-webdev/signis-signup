@@ -27,6 +27,7 @@ import { useState, useEffect } from 'react';
 import { useAuthContext } from '../../context/auth';
 import { useRouter } from 'next/router';
 import { getTranslation } from '../../utils/getTranslation';
+import { Notice } from '../../components/dashboard';
 
 export async function getStaticProps({ locale }) {
   const text = await getTranslation(locale, 'add-wallet');
@@ -150,6 +151,7 @@ export default function AddWallet({ text }) {
         <Button type='submit' colorScheme='blue' bg='brand.main' isLoading={loading}>
           {form.next}
         </Button>
+        {locale === 'ko' && <Notice />}
       </Box>
       <OrderedList maxW='container.sm' mx='auto' color='white' px='1'>
         {text.terms.map(([h, ul]) => (

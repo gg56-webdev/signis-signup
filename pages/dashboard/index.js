@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useAuthContext } from '../../context/auth';
 import { useRouter } from 'next/router';
-import { Spinner, Container } from '@chakra-ui/react';
-import { Auth } from '../../components/dashboard';
+import { Spinner, Container, Box } from '@chakra-ui/react';
+import { Auth, Notice } from '../../components/dashboard';
 import { getTranslation } from '../../utils/getTranslation';
 import NftCard from '../../components/NftCard/';
 import Head from 'next/head';
@@ -37,6 +37,12 @@ export default function Dashboard({ text }) {
           userWallet={userData?.wallet_address}
           isPaid={userData?.purchased}
         />
+
+        {locale === 'ko' && (
+          <Box mt='4'>
+            <Notice />
+          </Box>
+        )}
       </Container>
     </>
   );
