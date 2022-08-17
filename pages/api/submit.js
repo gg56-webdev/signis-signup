@@ -11,6 +11,7 @@ let options = {
 };
 
 export default async function handler({ method, body }, res) {
+  return res.status(400).send({ message: 'Bad request' });
   if (method !== 'POST') return res.status(405).send({ message: 'Only POST allowed' });
   const { name, email, device_type, phone_number, agree_to_reservation, locale } = body;
   try {

@@ -65,7 +65,7 @@ export default function EventSignupModal({ text, eventSignupDisclosure }) {
   };
   return (
     <>
-      <Button onClick={onOpen} colorScheme='red' bg='brand.secondary' fontSize='2xl' p='8' shadow='md' mt='10'>
+      <Button isDisabled colorScheme='red' bg='brand.secondary' fontSize='2xl' p='8' shadow='md' mt='10'>
         {hero.btn}
       </Button>
 

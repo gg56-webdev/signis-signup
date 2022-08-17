@@ -103,10 +103,11 @@ export default function EventPopup({ text, eventSignupOnOpen, btnText }) {
               </Stack>
             </Grid>
             <ButtonGroup alignSelf='center' justifyContent='center' size='lg' gap='4' flexWrap='wrap' p='4'>
-              <Button colorScheme='linkedin' onClick={eventSignupOnOpen}>
+              <Button isDisabled colorScheme='linkedin'>
                 {text.btn1}
               </Button>
               <Button
+                isDisabled
                 as='a'
                 href='https://gleam.io/OtTqb/-event-'
                 target='_blank'
