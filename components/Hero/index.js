@@ -2,6 +2,7 @@ import { Button, Container, Grid, Heading, Link, Text } from '@chakra-ui/react';
 import Popup from './Popup/Popup';
 import EventSignupModal from './EventSignup';
 import Download from './Download';
+import NLink from 'next/link';
 
 export default function Hero({ text, eventSignupDisclosure }) {
   const { hero } = text;
@@ -31,7 +32,12 @@ export default function Hero({ text, eventSignupDisclosure }) {
         >
           {hero.date}
         </Text>
-        <EventSignupModal text={text} eventSignupDisclosure={eventSignupDisclosure} />
+        {/* <EventSignupModal text={text} eventSignupDisclosure={eventSignupDisclosure} /> */}
+        <NLink passHref href='/check-rewards'>
+          <Button as='a' colorScheme='red' bg='brand.secondary' fontSize='2xl' p='8' shadow='md' mt='10'>
+            {hero.btn}
+          </Button>
+        </NLink>
         <Popup text={hero.disclaimer} />
         <Download />
       </Container>
