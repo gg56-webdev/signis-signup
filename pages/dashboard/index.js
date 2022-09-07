@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useAuthContext } from '../../context/auth';
 import { useRouter } from 'next/router';
-import { Spinner, Container, Box } from '@chakra-ui/react';
+import { Spinner, Container, Box, Link } from '@chakra-ui/react';
 import { Auth, Notice } from '../../components/dashboard';
 import { getTranslation } from '../../utils/getTranslation';
 import NftCard from '../../components/NftCard/';
@@ -43,6 +43,12 @@ export default function Dashboard({ text }) {
             <Notice />
           </Box>
         )}
+        <Box color='gray.600' textAlign='center' mt='6'>
+          {text.support}{' '}
+          <Link color='blue' href='mailto:support@gg56.world'>
+            support@gg56.world
+          </Link>
+        </Box>
       </Container>
     </>
   );
